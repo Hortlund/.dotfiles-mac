@@ -12,6 +12,8 @@ return require'treesitter-context'.setup{
             'function',
             'method',
             'sub',
+            'foreach',
+            'if',
             -- 'for', -- These won't appear in the context
             -- 'while',
             -- 'if',
