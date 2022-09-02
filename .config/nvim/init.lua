@@ -16,6 +16,7 @@ vim.o.autoindent = true
 vim.o.textwidth = 100
 vim.o.linebreak = true
 vim.o.wrap = true
+vim.opt.relativenumber = true
 --vim.o.expandtab = true
 
 vim.cmd('filetype plugin on')
