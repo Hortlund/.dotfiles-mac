@@ -8,7 +8,7 @@ local actions = require("telescope.actions")
 require("telescope").setup({
 	defaults = {
 		file_sorter = require("telescope.sorters").get_fzy_sorter,
-		prompt_prefix = " <",
+		prompt_prefix = " $ ",
 		color_devicons = true,
 
 		file_previewer = require("telescope.previewers").vim_buffer_cat.new,
@@ -19,6 +19,7 @@ require("telescope").setup({
 			i = {
 				["<C-x>"] = false,
 				["<C-q>"] = actions.send_to_qflist,
+				["<esc>"] = actions.close,
 			},
 		},
 	},
@@ -31,3 +32,13 @@ require("telescope").setup({
 	},
     ]]
 })
+
+local M = {}
+
+M.find_me_files = function()
+  local opts = {} -- define here if you want to define something
+  local ok = pcall(require"telescope.builtin".git_files, opts)
+  if not ok then require"telescope.builtin".find_files(opts) end
+end
+
+return M
