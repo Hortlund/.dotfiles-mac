@@ -1,3 +1,4 @@
+require("hortlund.telescope")
 local Remap = require("hortlund.keymap")
 local nnoremap = Remap.nnoremap
 
@@ -8,4 +9,6 @@ end)
 nnoremap("<C-p>", function()
     require('hortlund.telescope').find_me_files()
 end)
-
+nnoremap("<leader>pb", function()
+    require('telescope.builtin').buffers()
+end)
