@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/andreas.hortlund/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -140,18 +140,18 @@ export LC_ALL=en_US.UTF-8
 
 export ASKAS_BUTIK=andreash1
 export PERL5LIB=${HOME}/perl5/lib/perl5/:${HOME}/lib/perl5:${HOME}/Documents/git/air8/cgi-bin/core/lib:${HOME}/Documents/git/air8/cgi-bin/core/objects
-export PERL_MM_OPT='INSTALL_BASE=/Users/andreas.hortlund/perl5';
+export PERL_MM_OPT='INSTALL_BASE=$HOME/perl5';
 #export PERL5LIB=/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib:
 
-path+=('/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib')
-path+=('/Users/andreas.hortlund/Documents/git/air8')
+path+=('$HOME/Documents/git/air8/cgi-bin/core/lib')
+path+=('$HOME/Documents/git/air8')
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 source ~/perl5/perlbrew/etc/bashrc
 source /opt/homebrew/opt/git-extras/share/git-extras/git-extras-completion.zsh
-source /Users/andreas.hortlund/.config/broot/launcher/bash/br
+source $HOME/.config/broot/launcher/bash/br
 eval "$(mcfly init zsh)"
 eval "$(zoxide init zsh)"
 
@@ -159,4 +159,4 @@ eval "$(zoxide init zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
-alias config='/usr/bin/git --git-dir=/Users/andreas.hortlund/.dotfiles/ --work-tree=/Users/andreas.hortlund'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
