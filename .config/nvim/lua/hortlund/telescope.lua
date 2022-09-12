@@ -45,7 +45,7 @@ require("telescope").setup({
 				["<C-x>"] = false,
 				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
 				["<esc>"] = actions.close,
-				["<C-t>"] = telescope_custom_actions.multi_selection_open_tab,
+				--["<C-t>"] = telescope_custom_actions.multi_selection_open_tab,
 			},
 		},
 	},
