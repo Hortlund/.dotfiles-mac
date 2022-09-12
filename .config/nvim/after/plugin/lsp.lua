@@ -73,13 +73,13 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require'lspconfig'.perlpls.setup{
   on_attach = on_attach,
   flags = lsp_flags,
-  cmd = { '$HOME/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
-  settings = {
-    perl = {
-      inc = { '$HOME/Documents/git/air8/cgi-bin/core/lib', '$HOME/Documents/git/air8', '$HOME/Documents/git/air8/cgi-bin/core/objects' },
-      cwd = { '$HOME/Documents/git/air8' }
-    }
-  }
+  --cmd = { '$HOME/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
+  --settings = {
+    --perl = {
+      --inc = { '$HOME/Documents/git/air8/cgi-bin/core/lib', '$HOME/Documents/git/air8', '$HOME/Documents/git/air8/cgi-bin/core/objects' },
+      --cwd = { '$HOME/Documents/git/air8' }
+    --}
+  --}
 }
 
 require'lspconfig'.gopls.setup{
