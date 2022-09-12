@@ -1,7 +1,8 @@
 return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
-	use 'folke/tokyonight.nvim'
-	use 'sheerun/vim-polyglot'
+	--use 'folke/tokyonight.nvim'
+	use { "catppuccin/nvim", as = "catppuccin" }
+    use 'sheerun/vim-polyglot'
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'

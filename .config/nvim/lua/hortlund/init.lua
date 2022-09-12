@@ -1,7 +1,13 @@
 require("hortlund.set")
 require("hortlund.packer")
 
-vim.api.nvim_command('autocmd BufRead,BufNewFile /Users/andreas.hortlund/Documents/git/air8/* setlocal fileencodings=iso-8859-1')
+vim.g.catppuccin_flavour = "mocha"
+
+require("catppuccin").setup()
+
+vim.cmd [[colorscheme catppuccin]]
+
+vim.api.nvim_command('autocmd BufRead,BufNewFile $HOME/Documents/git/air8/* setlocal fileencodings=iso-8859-1')
 vim.api.nvim_command('au BufNewFile,BufRead *.tt set filetype=tt2html')
 
 
@@ -24,10 +30,10 @@ require('lualine').setup{
 	lualine_x = {"store",'encoding', 'fileformat', 'filetype'}
   }
 }
-vim.cmd[[let g:tokyonight_style = "night"]]
-vim.cmd[[let g:tokyonight_italic_functions = 1]]
+--vim.cmd[[let g:tokyonight_style = "night"]]
+--vim.cmd[[let g:tokyonight_italic_functions = 1]]
 
-vim.cmd[[colorscheme tokyonight]]
+--vim.cmd[[colorscheme tokyonight]]
 
 --nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 --nnoremap <backspace> <C-]>
@@ -38,4 +44,4 @@ map("n", "<tab>", "<C-T>")
 map("n", "<C-f>", "<cmd>Telescope live_grep<CR>")
 map("n", "<Leader>f", "<cmd>Telescope grep_string<CR>")
 map("n", "<Leader>s", ":<C-u>call gitblame#echo()<CR>")
-map("n", "<Leader>b", ":! perl /Users/andreas.hortlund/Documents/git/air8/_VERKTYG/publish.pm %:p 1<CR>")
+map("n", "<Leader>b", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p 1<CR>")

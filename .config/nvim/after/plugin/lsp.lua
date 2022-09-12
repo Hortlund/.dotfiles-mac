@@ -73,11 +73,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require'lspconfig'.perlpls.setup{
   on_attach = on_attach,
   flags = lsp_flags,
-  cmd = { '/Users/andreas.hortlund/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
+  cmd = { '$HOME/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
   settings = {
     perl = {
-      inc = { '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib', '/Users/andreas.hortlund/Documents/git/air8', '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/objects' },
-      cwd = { '/Users/andreas.hortlund/Documents/git/air8' }
+      inc = { '$HOME/Documents/git/air8/cgi-bin/core/lib', '$HOME/Documents/git/air8', '$HOME/Documents/git/air8/cgi-bin/core/objects' },
+      cwd = { '$HOME/Documents/git/air8' }
     }
   }
 }
@@ -94,7 +94,7 @@ local opts = {
   -- rust-tools options
   tools = {
     autoSetHints = true,
-    hover_with_actions = true,
+--    hover_with_actions = true,
     inlay_hints = {
       show_parameter_hints = true,
       parameter_hints_prefix = "",
