@@ -10,14 +10,14 @@ vim.opt.ma = true
 vim.opt.cursorline = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.softtabstop = 2
+vim.opt.softtabstop = 4
 vim.opt.confirm = true
-vim.opt.autoindent = true 
+vim.opt.autoindent = true
 vim.opt.textwidth = 100
 vim.opt.linebreak = true
 vim.opt.wrap = true
 vim.opt.relativenumber = true
---vim.o.expandtab = true
+--vim.opt.expandtab = true
 
 vim.cmd('filetype plugin on')
 
