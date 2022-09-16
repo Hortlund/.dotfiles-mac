@@ -93,6 +93,13 @@ ls.add_snippets("perl", {
         }),
         s("dump", {
             t({"use Data::Dumper;", "$Data::Dumper::Indent = 0;"})
+        }),
+        s("warn", {
+            t("warn("), i(1,"N"), t(");")
+        }),
+        s("dw", {
+            t({"use Data::Dumper;", "$Data::Dumper::Indent = 0;"}),
+            t({"", "warn(Dumper("}), i(1, "Nått?"), t("));")
         })
 })
 
