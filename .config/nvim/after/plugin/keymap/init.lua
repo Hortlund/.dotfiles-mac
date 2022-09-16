@@ -34,6 +34,12 @@ nnoremap("<leader>j", "<cmd>lprev<CR>zz")
 
 nmap("<backspace>", "<C-]>")
 nmap("<tab>", "<C-T>")
+
+inoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
+inoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, silent = true })
+vnoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
+vnoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, silent = true })
+
 --map("n", "<C-p>", "<cmd>Telescope find_files<CR>")
 nmap("<C-f>", "<cmd>Telescope live_grep<CR>")
 nmap("<Leader>f", "<cmd>Telescope grep_string<CR>")
