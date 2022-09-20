@@ -123,6 +123,7 @@ alias ls="exa"
 alias cd="z"
 alias cat="bat"
 alias vi="nvim"
+alias tp="termscp"
 
 publish () {
   export ASKAS_BUTIK=${1}

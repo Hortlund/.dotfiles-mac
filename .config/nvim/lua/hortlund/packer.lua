@@ -14,6 +14,8 @@ return require('packer').startup(function()
     use 'simrat39/rust-tools.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'nvim-treesitter/nvim-treesitter-context'
+    use 'ThePrimeagen/vim-be-good'
+    use 'ThePrimeagen/harpoon'
 	use {
   		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }
