@@ -1,6 +1,6 @@
 vim.opt.syntax = "on"
 vim.opt.nu = true 
-vim.opt.mouse = "a"
+--vim.opt.mouse = "a"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.backup = false
 vim.opt.writebackup = false
