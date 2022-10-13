@@ -1,5 +1,6 @@
-require("hortlund.keymap")
-
+local Remap = require("hortlund.keymap")
+local nnoremap = Remap.nnoremap
+local inoremap = Remap.inoremap
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -135,13 +136,13 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 require'lspconfig'.perlpls.setup{
   on_attach = on_attach,
   flags = lsp_flags,
-  --cmd = { '$HOME/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
-  --settings = {
-    --perl = {
-      --inc = { '$HOME/Documents/git/air8/cgi-bin/core/lib', '$HOME/Documents/git/air8', '$HOME/Documents/git/air8/cgi-bin/core/objects' },
-      --cwd = { '$HOME/Documents/git/air8' }
-    --}
-  --}
+  cmd = { '/Users/andreas.hortlund/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
+  perl = {
+    perlcritic = { enabled = true },
+    syntax = { enabled = true },
+    inc = { '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib', '/Users/andreas.hortlund/Documents/git/air8', '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/objects' },
+    cwd = { '/Users/andreas.hortlund/Documents/git/air8' },
+  }
 }
 
 require'lspconfig'.gopls.setup{
