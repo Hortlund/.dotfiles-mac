@@ -1,6 +1,12 @@
 local Remap = require("hortlund.keymap")
 local nnoremap = Remap.nnoremap
 local inoremap = Remap.inoremap
+
+local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
+if not status_ok then
+	return
+end
+
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap=true, silent=true }
@@ -131,6 +137,25 @@ ls.add_snippets("perl", {
         })
 })
 
+require("nvim-lsp-installer").setup({
+    automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
+    ui = {
+        icons = {
+            server_installed = "✓",
+            server_pending = "➜",
+            server_uninstalled = "✗"
+        }
+    }
+})
+
+local lspconfig = require("lspconfig")
+
+local servers = { "gopls", "perlnavigator", "perlpls", "rust-analyzer", "bashls"}
+
+lsp_installer.setup({
+	ensure_installed = servers,
+})
+
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 require'lspconfig'.perlpls.setup{
@@ -144,6 +169,29 @@ require'lspconfig'.perlpls.setup{
     cwd = { '/Users/andreas.hortlund/Documents/git/air8' },
   }
 }
+
+--require'lspconfig'.perlnavigator.setup{
+--    on_attach = on_attach,
+--    flags = lsp_flags,
+-- settings = {
+--   perlnavigator = {
+--      enableWarnings     = true,
+--      includeLib         = true,
+--      includePaths       = "/Users/andreas.hortlund/Documents/git/air8",
+--      logging            = true,
+--      perlPath           = "perl",
+--      perlcriticEnabled  = true,
+--      perlcriticProfile  = "",
+--      perltidyEnabled    = true,
+--      perltidyProfile    = "",
+--      severity1          = "hint",
+--      severity2          = "hint",
+--      severity3          = "hint",
+--      severity4          = "info",
+--      severity5          = "warning",
+--    }
+--  }
+--}
 
 require'lspconfig'.gopls.setup{
   capabilities = capabilities,

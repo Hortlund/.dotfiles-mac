@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  PerlNavigator = {
+    loaded = true,
+    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/PerlNavigator",
+    url = "https://github.com/bscan/PerlNavigator"
+  },
   catppuccin = {
     loaded = true,
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/catppuccin",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lsp-installer"] = {
+    loaded = true,
+    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
+    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

@@ -3,6 +3,7 @@ return require('packer').startup(function()
 	--use 'folke/tokyonight.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use 'williamboman/nvim-lsp-installer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-buffer'
@@ -17,6 +18,7 @@ return require('packer').startup(function()
     use 'ThePrimeagen/harpoon'
 	use 'junegunn/fzf.vim'
 	use 'junegunn/fzf'
+    use 'bscan/PerlNavigator'
     use {
   		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }

@@ -13,9 +13,9 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.confirm = true
 vim.opt.autoindent = true
-vim.opt.textwidth = 100
+vim.opt.textwidth = 80
 vim.opt.linebreak = true
-vim.opt.wrap = false
+vim.opt.wrap = true
 vim.opt.relativenumber = true
 
 vim.opt.hlsearch = false
