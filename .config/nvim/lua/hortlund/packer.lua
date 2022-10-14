@@ -2,7 +2,6 @@ return require('packer').startup(function()
 	use 'wbthomason/packer.nvim'
 	--use 'folke/tokyonight.nvim'
 	use { "catppuccin/nvim", as = "catppuccin" }
-    use 'sheerun/vim-polyglot'
     use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
@@ -16,24 +15,15 @@ return require('packer').startup(function()
     use 'nvim-treesitter/nvim-treesitter-context'
     use 'ThePrimeagen/vim-be-good'
     use 'ThePrimeagen/harpoon'
-	use {
+	use 'junegunn/fzf.vim'
+	use 'junegunn/fzf'
+    use {
   		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }
 	}
 	use {
   		'nvim-lualine/lualine.nvim',
   		requires = { 'kyazdani42/nvim-web-devicons'}
-	}
-	use {
-  		'pwntester/octo.nvim',
-  		requires = {
-    			'nvim-lua/plenary.nvim',
-    			'nvim-telescope/telescope.nvim',
-    			'kyazdani42/nvim-web-devicons',
-  		},
-  		config = function ()
-    			require"octo".setup()
-  		end
 	}
 	use {
 		'zivyangll/git-blame.vim'
