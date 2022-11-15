@@ -158,41 +158,42 @@ lsp_installer.setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
---require'lspconfig'.perlpls.setup{
---  on_attach = on_attach,
---  flags = lsp_flags,
---  cmd = { '/Users/andreas.hortlund/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
---  perl = {
---    perlcritic = { enabled = true },
---    syntax = { enabled = true },
---    inc = { '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib', '/Users/andreas.hortlund/Documents/git/air8', '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/objects' },
---    cwd = { '/Users/andreas.hortlund/Documents/git/air8' },
---  }
---}
-
-require'lspconfig'.perlnavigator.setup{
-    capabilities = capabilities,
-    on_attach = on_attach,
-    flags = lsp_flags,
- settings = {
-   perlnavigator = {
-      enableWarnings     = true,
-      includeLib         = true,
-      includePaths       = "/Users/andreas.hortlund/Documents/git/air8",
-      logging            = true,
-      perlPath           = "perl",
-      perlcriticEnabled  = true,
-      perlcriticProfile  = "",
-      perltidyEnabled    = true,
-      perltidyProfile    = "",
-      severity1          = "hint",
-      severity2          = "hint",
-      severity3          = "hint",
-      severity4          = "info",
-      severity5          = "warning",
-    }
+require'lspconfig'.perlpls.setup{
+  capabilities = capabilities,
+  on_attach = on_attach,
+  flags = lsp_flags,
+  cmd = { '/Users/andreas.hortlund/perl5/perlbrew/perls/perl-5.34.1/bin/pls' },
+  perl = {
+    perlcritic = { enabled = true },
+    syntax = { enabled = true },
+    inc = { '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib', '/Users/andreas.hortlund/Documents/git/air8', '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/objects' },
+    cwd = { '/Users/andreas.hortlund/Documents/git/air8' },
   }
 }
+
+--require'lspconfig'.perlnavigator.setup{
+--    capabilities = capabilities,
+--    on_attach = on_attach,
+--    flags = lsp_flags,
+-- settings = {
+--   perlnavigator = {
+--      enableWarnings     = true,
+--      includeLib         = true,
+--      includePaths       = "/Users/andreas.hortlund/Documents/git/air8",
+--      logging            = true,
+--      perlPath           = "perl",
+--      perlcriticEnabled  = true,
+--      perlcriticProfile  = "",
+--      perltidyEnabled    = true,
+--      perltidyProfile    = "",
+--      severity1          = "hint",
+--      severity2          = "hint",
+--      severity3          = "hint",
+--      severity4          = "info",
+--      severity5          = "warning",
+--    }
+--  }
+--}
 
 require'lspconfig'.gopls.setup{
   capabilities = capabilities,

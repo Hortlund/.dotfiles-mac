@@ -32,6 +32,13 @@ nnoremap("<C-j>", "<cmd>cprev<CR>zz")
 nnoremap("<leader>k", "<cmd>lnext<CR>zz")
 nnoremap("<leader>j", "<cmd>lprev<CR>zz")
 
+nnoremap("Y", "yg$")
+nnoremap("n", "nzzzv")
+nnoremap("N", "Nzzzv")
+nnoremap("J", "mzJ`z")
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
+
 inoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
 inoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, silent = true })
 vnoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
