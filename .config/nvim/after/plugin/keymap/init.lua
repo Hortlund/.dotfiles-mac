@@ -44,6 +44,10 @@ inoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, si
 vnoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
 vnoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, silent = true })
 
+for i=1,9 do
+    nnoremap(i.. ",", i .. "gt")
+end
+
 --map("n", "<C-p>", "<cmd>Telescope find_files<CR>")
 nmap("<C-f>", "<cmd>Telescope live_grep<CR>")
 nmap("<Leader>f", "<cmd>Telescope grep_string<CR>")

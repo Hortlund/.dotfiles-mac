@@ -19,6 +19,7 @@ return require('packer').startup(function()
 	use 'junegunn/fzf.vim'
 	use 'junegunn/fzf'
     use 'bscan/PerlNavigator'
+    use 'sangdol/mintabline.vim'
     use {
   		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }

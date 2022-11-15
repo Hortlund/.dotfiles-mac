@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mintabline.vim"] = {
+    loaded = true,
+    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/mintabline.vim",
+    url = "https://github.com/sangdol/mintabline.vim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/nvim-cmp",
