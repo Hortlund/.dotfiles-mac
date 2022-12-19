@@ -26,6 +26,9 @@ vim.opt.errorbells = false
 vim.opt.updatetime = 50
 vim.opt.termguicolors = true
 
+vim.opt.listchars = { eol = '↵', tab = '→ ', trail = '~', space = '·', extends = '▶', precedes = '◀'  }
+vim.opt.list = true
+
 vim.opt.tags = "/Users/andreas.hortlund/Documents/git/tags"
 
 vim.api.nvim_command('filetype plugin on')

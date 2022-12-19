@@ -69,7 +69,7 @@ snippet = {
       i = cmp.mapping.abort(),
       c = cmp.mapping.close(),
     }),
-    ["<Tab>"] = cmp.mapping(function(fallback)
+    ["<S-Tab>"] = cmp.mapping(function(fallback)
     if cmp.visible() then
       cmp.select_next_item()
     elseif luasnip.expand_or_jumpable() then
@@ -81,18 +81,18 @@ snippet = {
     end
   end, { "i", "s" }),
 
-  ["<S-Tab>"] = cmp.mapping(function(fallback)
-    if cmp.visible() then
-      cmp.select_prev_item()
-    elseif luasnip.jumpable(-1) then
-      luasnip.jump(-1)
-    else
-      fallback()
-    end
-  end, { "i", "s" }),
+--  ["<S-Tab>"] = cmp.mapping(function(fallback)
+--    if cmp.visible() then
+--      cmp.select_prev_item()
+--    elseif luasnip.jumpable(-1) then
+--      luasnip.jump(-1)
+--    else
+--      fallback()
+--    end
+--  end, { "i", "s" }),
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
@@ -150,7 +150,7 @@ require("nvim-lsp-installer").setup({
 
 local lspconfig = require("lspconfig")
 
-local servers = { "gopls", "perlnavigator", "perlpls", "rust-analyzer", "bashls"}
+local servers = { "gopls", "perlnavigator", "perlpls", "rust-analyzer", "bashls", "elixirls"}
 
 lsp_installer.setup({
 	ensure_installed = servers,
@@ -169,6 +169,13 @@ require'lspconfig'.perlpls.setup{
     inc = { '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib', '/Users/andreas.hortlund/Documents/git/air8', '/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/objects' },
     cwd = { '/Users/andreas.hortlund/Documents/git/air8' },
   }
+}
+
+require'lspconfig'.elixirls.setup{
+  cmd = { "/home/hortlund/.local/share/nvim/lsp_servers/elixirls/elixir-ls" },
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
 }
 
 --require'lspconfig'.perlnavigator.setup{
