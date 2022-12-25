@@ -13,9 +13,13 @@ vim.opt.softtabstop = 4
 vim.opt.smartindent = true
 vim.opt.confirm = true
 vim.opt.autoindent = true
---vim.opt.textwidth = 80
---vim.opt.linebreak = true
-vim.opt.wrap = false
+vim.opt.textwidth = 80
+--vim.opt.wrapmargin = 0
+vim.opt.linebreak = true
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+vim.opt.wrap = true
 vim.opt.relativenumber = true
 
 vim.opt.hlsearch = false

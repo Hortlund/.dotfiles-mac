@@ -20,6 +20,8 @@ return require('packer').startup(function()
 	use 'junegunn/fzf'
     use 'bscan/PerlNavigator'
     use 'sangdol/mintabline.vim'
+	use 'mbbill/undotree'
+	use 'tpope/vim-fugitive'
     use {
   		'nvim-telescope/telescope.nvim',
   		requires = { {'nvim-lua/plenary.nvim'}, {'nvim-treesitter/nvim-treesitter'} }
@@ -28,8 +30,8 @@ return require('packer').startup(function()
   		'nvim-lualine/lualine.nvim',
   		requires = { 'kyazdani42/nvim-web-devicons'}
 	}
-	use {
-		'zivyangll/git-blame.vim'
-	}
+	--use {
+	--	'zivyangll/git-blame.vim'
+	--}
 end)
 

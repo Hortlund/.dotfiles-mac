@@ -5,6 +5,7 @@ local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
+nnoremap("<leader>pv", vim.cmd.Ex)
 --Stolen shamelessly from ThePrimeagen
 
 --Moves slected lines up and down

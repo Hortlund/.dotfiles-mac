@@ -140,12 +140,12 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export ASKAS_BUTIK=andreash1
-export PERL5LIB=${HOME}/perl5/lib/perl5/:${HOME}/lib/perl5:${HOME}/Documents/git/air8/cgi-bin/core/lib:${HOME}/Documents/git/air8/cgi-bin/core/objects
-export PERL_MM_OPT='INSTALL_BASE=$HOME/perl5';
-#export PERL5LIB=/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib:
+#export PERL5LIB=${HOME}/perl5/lib/perl5/:${HOME}/lib/perl5:${HOME}/Documents/git/air8/cgi-bin/core/lib:${HOME}/Documents/git/air8/cgi-bin/core/objects
+#export PERL_MM_OPT='INSTALL_BASE=$HOME/perl5';
+##export PERL5LIB=/Users/andreas.hortlund/Documents/git/air8/cgi-bin/core/lib:
 
-path+=('$HOME/Documents/git/air8/cgi-bin/core/lib')
-path+=('$HOME/Documents/git/air8')
+#path+=('$HOME/Documents/git/air8/cgi-bin/core/lib')
+#path+=('$HOME/Documents/git/air8')
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -162,3 +162,4 @@ eval "$(zoxide init zsh)"
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH=$PATH:$(go env GOPATH)/bin
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#eval "$(starship init zsh)"

@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
-  ["git-blame.vim"] = {
-    loaded = true,
-    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/git-blame.vim",
-    url = "https://github.com/zivyangll/git-blame.vim"
-  },
   harpoon = {
     loaded = true,
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -194,10 +189,20 @@ _G.packer_plugins = {
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  undotree = {
+    loaded = true,
+    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/undotree",
+    url = "https://github.com/mbbill/undotree"
+  },
   ["vim-be-good"] = {
     loaded = true,
     path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/vim-be-good",
     url = "https://github.com/ThePrimeagen/vim-be-good"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/andreas.hortlund/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   }
 }
 
