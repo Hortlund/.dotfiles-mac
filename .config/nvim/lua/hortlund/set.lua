@@ -37,5 +37,6 @@ vim.opt.tags = "/Users/andreas.hortlund/Documents/git/tags"
 
 vim.api.nvim_command('filetype plugin on')
 
+vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
