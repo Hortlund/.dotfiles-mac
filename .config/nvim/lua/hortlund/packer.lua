@@ -34,6 +34,8 @@ return require('packer').startup(function()
 		'zivyangll/git-blame.vim'
 	}
 
+	use {'nvim-tree/nvim-tree.lua'}
+
 	use {
     'VonHeikemen/lsp-zero.nvim',
     requires = {
