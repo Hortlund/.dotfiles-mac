@@ -58,5 +58,7 @@ return require('packer').startup(function()
     }
   }
 
+	use 'akinsho/toggleterm.nvim'
+
 end)
 

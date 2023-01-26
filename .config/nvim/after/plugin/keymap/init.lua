@@ -40,7 +40,7 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
-nmap("<leader>t", "<cmd>NvimTreeToggle<CR>")
+nmap("<leader>e", "<cmd>NvimTreeToggle<CR>")
 
 inoremap("<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", { noremap = true, silent = true })
 inoremap("<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", { noremap = true, silent = true })
@@ -55,6 +55,7 @@ end
 nmap("<C-f>", "<cmd>Telescope live_grep<CR>")
 nmap("<Leader>f", "<cmd>Telescope grep_string<CR>")
 nmap("<Leader>s", ":<C-u>call gitblame#echo()<CR>")
-nmap("<Leader>b", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p 1<CR>")
+--nmap("<Leader>b", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p 1<CR>")
+nmap("<Leader>b", "<cmd>lua _ASYNC_PUBLISH(vim.fn.expand('%:p'))<CR>")
 nmap("<Leader>n", ":! perl $HOME/Documents/git/air8/_VERKTYG/publish.pm %:p<CR>")
 

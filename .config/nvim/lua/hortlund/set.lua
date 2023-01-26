@@ -12,14 +12,14 @@ vim.opt.softtabstop = 4
 --vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.confirm = true
-vim.opt.autoindent = true
-vim.opt.textwidth = 80
+--vim.opt.autoindent = true
+--vim.opt.textwidth = 80
 --vim.opt.wrapmargin = 0
 vim.opt.linebreak = true
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.relativenumber = true
 
 vim.opt.hlsearch = false
@@ -37,6 +37,6 @@ vim.opt.tags = "/Users/andreas.hortlund/Documents/git/tags"
 
 vim.api.nvim_command('filetype plugin on')
 
-vim.opt.colorcolumn = "80"
+--vim.opt.colorcolumn = "80"
 vim.g.mapleader = " "
 
