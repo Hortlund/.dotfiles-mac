@@ -1,0 +1,9 @@
+{
+  "doctype": {
+    "prefix": "doctype",
+    "body": [
+		"<!DOCTYPE ${1:variable} html>\n"
+	],
+    "description": "HTML - 5.0 (doctype)"
+  }
+}
