@@ -1,9 +1,27 @@
 {
-  "doctype": {
-    "prefix": "doctype",
+  "Inline comment": {
+    "prefix": "_comment_inline",
     "body": [
-		"<!DOCTYPE ${1:variable} html>\n"
+		"#-----------------------------------------------------------------------------------------------------------------",
+		"# ${1:Comment}",
+		"#-----------------------------------------------------------------------------------------------------------------"
 	],
-    "description": "HTML - 5.0 (doctype)"
+    "description": "Inline comment, Askås style"
+  },
+  "Dumper warn": {
+    "prefix": "_dumper_warn",
+    "body": [
+		"use Data::Dumper;",
+		"warn(\"${1:Warn}\" . Dumper(${2:Value}));"
+	],
+    "description": "Warn a value with dumper"
+  },
+  "Log to file": {
+    "prefix": "_log_to_file",
+    "body": [
+		"use Data::Dumper;",
+		"AIR::Utils::Files::write_file($app, $app->setting('cgidir') . '/${1:File}', Dumper(${2:Value}), '>>');"
+	],
+    "description": "Log to a file in cgidir"
   }
 }
